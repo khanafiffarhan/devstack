@@ -45,12 +45,12 @@ Open http://localhost:3000 in your browser.
 
 ❓ React Questions & Answers
 1. What is JSX, and why is it used in React?
-JSX is a syntax that lets us write HTML-like code inside JavaScript. React uses it because it makes the code much easier to read and write compared to creating elements with pure JavaScript.
+JSX is a syntax that can made us possible to write html in the javascript file.
 
 2. What is the difference between props and state?
-Props are data passed from a parent component to a child (read-only).
+props is a data that pass parent to childre.
+state is data that stay in the container and change value
 
-State is data that belongs to a component and can change over time (using useState).
 3. What does the useState hook do, and where did you use it in this project?
 useState lets a component remember and update values.
 

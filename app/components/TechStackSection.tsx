@@ -157,7 +157,7 @@ export default function TechStackSection() {
         </div>
 
         <div className="lg:col-span-1">
-          <div className="sticky top-6 bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden">
+          <div className="sticky top-15 bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden">
 
             <div className="bg-brand-gradient px-5 py-4">
               <h3 className="text-white font-bold text-lg flex items-center gap-2">
