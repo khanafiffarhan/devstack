@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Dev Stack
 
-## Getting Started
+**Dev Stack** is a modern web application that helps developers discover and build their ideal technology stack. Browse curated tools and technologies, add them to your personal stack with a single click, and manage everything in a clean, interactive interface.
 
-First, run the development server:
+---
+
+## 🛠️ Technology Stack
+
+- **Next.js** (App Router)
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **react-toastify**
+
+---
+
+## ✨ Features
+
+1. **Interactive Technology Cards**  
+   Browse a collection of popular technologies loaded from a JSON file. Each card shows icon, category, rating, difficulty, and description.
+
+2. **Personal Stack Builder**  
+   Click “Add to Stack” to collect technologies. You can only add each item once. The right-side panel shows your current stack with the ability to remove individual items or clear everything.
+
+3. **Responsive Design + Mobile Menu**  
+   Fully responsive layout with a hamburger menu for mobile devices, sticky stack panel, and modern UI.
+
+---
+
+## 📸 Preview
+
+*(Add screenshots of your app here later)*
+
+---
+
+## 🚀 Getting Started
 
 ```bash
+# Install dependencies
+npm install
+
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open http://localhost:3000 in your browser.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+❓ React Questions & Answers
+1. What is JSX, and why is it used in React?
+JSX is a syntax that lets us write HTML-like code inside JavaScript. React uses it because it makes the code much easier to read and write compared to creating elements with pure JavaScript.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. What is the difference between props and state?
+Props are data passed from a parent component to a child (read-only).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+State is data that belongs to a component and can change over time (using useState).
+3. What does the useState hook do, and where did you use it in this project?
+useState lets a component remember and update values.
 
-## Learn More
+In this project I used it for:
 
-To learn more about Next.js, take a look at the following resources:
+technologies (list of tech cards)
+stack (selected technologies)
+loading (loading state)
+isOpen (hamburger menu open/close)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. What does the useEffect hook do, and why did you need it to load the JSON data?
+useEffect runs code after the component renders.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+I used it to fetch the technologies JSON file when the page first loads, because fetching data is a side effect that should not happen during render.
+5. Why does every item in a .map() list need a unique key prop?
+React needs a unique key so it can efficiently track which items changed, were added, or removed. Without unique keys, React may re-render incorrectly or show bugs.
+6. What is conditional rendering? Show one place you used it.
+Conditional rendering means showing different UI based on a condition.
 
-## Deploy on Vercel
+Example in this project: when the stack is empty, we show the message “Your Stack is empty”. When it has items, we show the list of selected technologies.
+7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Parent → Child: Pass data using props.
+Child → Parent: Pass a function as a prop. The child calls that function to send data or trigger an action in the parent.
